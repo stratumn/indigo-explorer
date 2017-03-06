@@ -14,5 +14,5 @@ coverage.html
 .cover*
 
 # Example build directory
-example/dist
+src/app
 .publish
