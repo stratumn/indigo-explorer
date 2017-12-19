@@ -1,10 +1,10 @@
 {
-  "name": "indigo-explorer",
-  "version": "0.8.0",
-  "description": "IndigoExplorer",
+  "name": "@indigoframework/tmpop-explorer",
+  "version": "0.1.0",
+  "description": "Block Explorer for Indigo Tendermint Store",
   "main": "lib/IndigoExplorer.js",
   "author": "Stratumn",
-  "license": "SEE LICENSE file",
+  "license": "Apache-2.0",
   "homepage": "https://github.com/stratumn/indigo-explorer",
   "repository": {
     "type": "git",
@@ -37,6 +37,9 @@
   "peerDependencies": {
     "react": "^15.4.2"
   },
+  "resolutions": {
+    "require-dir": "0.3.2"
+  },
   "browserify-shim": {
     "react": "global:React"
   },
@@ -50,12 +53,10 @@
     "test": "echo \"no tests yet\" && exit 0",
     "watch": "gulp watch:lib",
     "update-license-headers": "./update-license-headers.sh",
-    "version:app": "sed -i '' \"s/\\\"indigo-explorer\\\": \\\".*\\\"/\\\"indigo-explorer\\\": \\\"^$npm_package_version\\\"/g\" ./app/package.json",
+    "version:app":
+      "sed -i '' \"s/\\\"indigo-explorer\\\": \\\".*\\\"/\\\"indigo-explorer\\\": \\\"^$npm_package_version\\\"/g\" ./app/package.json",
     "version": "npm run version:app && git add ./app/package.json",
     "env": "echo $npm_package_version"
   },
-  "keywords": [
-    "react",
-    "react-component"
-  ]
+  "keywords": ["react", "react-component"]
 }
